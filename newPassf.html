@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="animation.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karas Chan - Sign Up</title>
+    <title>Karas Chan - Forgot Password</title>
     <style>
         body {
             background: url('img/1/HG.png') no-repeat center center fixed;
@@ -143,7 +143,7 @@
             position: relative;
             padding: 50px;
             width: 300px;
-            min-height: 450px; /* Increased height to accommodate new fields */
+            min-height: 300px; /* Adjusted height */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -185,7 +185,7 @@
         }
 
         .form .inputBx input {
-            width: 80%;
+            width: 90%;
             outline: none;
             border: none;
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -198,22 +198,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .form .inputBx .password-control {
-            position: absolute;
-            top: 11px;
-            right: 10px;
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
-            transition: 0.5s;
-        }
-
-        .form .inputBx .view {
-            background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
-            transition: 0.5s;
-        }
-
         .form .inputBx .fas {
             position: absolute;
             top: 13px;
@@ -223,7 +207,7 @@
         .form .inputBx input[type="submit"] {
             background: #fff;
             color: #111;
-            max-width: 100px;
+            max-width: 150px;
             padding: 8px 10px;
             box-shadow: none;
             letter-spacing: 1px;
@@ -273,24 +257,16 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .remember {
-            position: relative;
-            display: inline-block;
-            color: #fff;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="web.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="#">Services</a>
         <a href="#">Contact</a>
         <a href="products.html">Products</a>
-        <a href="Shopping Cart.html">Cart</a>
+        <a href="shopping_cart.html">Cart</a>
     </div>
     
     <section>
@@ -302,38 +278,20 @@
             <div class="square" style="--i:4;"></div>
             <div class="square" style="--i:5;"></div>
             
-            <div class="container"> 
-                <div class="form"> 
-                    <h2>Sign Up</h2>
+            <div class="container">
+                <div class="form">
+                    <h2>Forgot Password</h2>
                     <form action="">
-                        <div class="inputBx">
-                            <input type="text" required="required">
-                            <span>Full Name</span>
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="inputBx">
-                            <input type="text" required="required">
-                            <span>Address</span>
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
                         <div class="inputBx">
                             <input type="email" required="required">
                             <span>Email</span>
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="inputBx password">
-                            <input id="password-input" type="password" name="password" required="required">
-                            <span>Password</span>
-                            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
-                            <i class="fas fa-key"></i>
-                        </div>
-                        <label class="remember"><input type="checkbox">
-                            Remember Me</label>
                         <div class="inputBx">
-                            <input type="submit" value="Sign Up"> 
+                            <input type="submit" value="Reset Password">
                         </div>
                     </form>
-                    <p>Already have an account? <a href="logIn.html">Log in</a></p>
+                    <p>Remember your password? <a href="logIn.html">Log in</a></p>
                 </div>
             </div>
         </div>
@@ -344,18 +302,5 @@
             <img src="img/1/Employee Handbook.png" alt="Bottom Image" class="bottom-image">
         </div>
     </div>
-    <script>
-        function show_hide_password(target){
-            var input = document.getElementById('password-input');
-            if (input.getAttribute('type') == 'password') {
-                target.classList.add('view');
-                input.setAttribute('type', 'text');
-            } else {
-                target.classList.remove('view');
-                input.setAttribute('type', 'password');
-            }
-            return false;
-        }
-    </script>
 </body>
 </html>

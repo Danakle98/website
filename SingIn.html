@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="animation.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karas Chan</title>
+    <title>Karas Chan - Sign Up</title>
     <style>
         body {
             background: url('img/1/HG.png') no-repeat center center fixed;
@@ -54,10 +54,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
             min-height: 100vh;
-            /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%; */
             animation: gradient 10s ease infinite;
         }
 
@@ -146,7 +143,7 @@
             position: relative;
             padding: 50px;
             width: 300px;
-            min-height: 380px;
+            min-height: 450px; /* Increased height to accommodate new fields */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -288,12 +285,12 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="web.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="#">Services</a>
         <a href="#">Contact</a>
         <a href="products.html">Products</a>
-        <a href="Shopping Cart.html">Cart</a>
+        <a href="shopping_cart.html">Cart</a>
     </div>
     
     <section>
@@ -307,12 +304,22 @@
             
             <div class="container"> 
                 <div class="form"> 
-                    <h2>LOGIN to CodePen</h2>
+                    <h2>Sign Up</h2>
                     <form action="">
                         <div class="inputBx">
                             <input type="text" required="required">
-                            <span>Login</span>
-                            <i class="fas fa-user-circle"></i>
+                            <span>Full Name</span>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="inputBx">
+                            <input type="text" required="required">
+                            <span>Address</span>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="inputBx">
+                            <input type="email" required="required">
+                            <span>Email</span>
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div class="inputBx password">
                             <input id="password-input" type="password" name="password" required="required">
@@ -321,13 +328,12 @@
                             <i class="fas fa-key"></i>
                         </div>
                         <label class="remember"><input type="checkbox">
-                            Remember</label>
+                            Remember Me</label>
                         <div class="inputBx">
-                            <input type="submit" value="Log in" disabled> 
+                            <input type="submit" value="Sign Up"> 
                         </div>
                     </form>
-                    <p>Forgot password? <a href="newPassf.html">Click Here</a></p>
-                    <p>Don't have an account <a href="SingIn.html">Sign up</a></p>
+                    <p>Already have an account? <a href="logIn.html">Log in</a></p>
                 </div>
             </div>
         </div>
@@ -337,6 +343,7 @@
             <img src="img/1/Employee Handbook.png" alt="Bottom Image" class="bottom-image">
             <img src="img/1/Employee Handbook.png" alt="Bottom Image" class="bottom-image">
         </div>
+    </div>
     <script>
         function show_hide_password(target){
             var input = document.getElementById('password-input');
