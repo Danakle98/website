@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+        * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+        body {
+            background: url('img/1/HG.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .navbar a {
+            background: rgba(255, 255, 255, 0.8);
+            color: #ff8fc4;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid #ff4d8b;
+            box-shadow: 0px 4px 10px rgba(255, 77, 139, 0.5);
+        }
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .about-box img {
+            position: absolute;
+            text-align: center;
+            top: 170px;
+            left: 150px;
+            width: 60%;
+            height: auto;
+
+        }
+        .character-image {
+            position: absolute;
+            bottom: 0px;
+            right: 20px;
+            max-width: 30%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="web.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="products.html">Products</a>
+        <a href="Shopping Cart.html">Cart</a>
+
+
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="about-box">
+                    <img src="img/7/Employee Handbook.png" alt="About Content">
+                </div>
+            </div>
+            <div class="col-6">
+                <img class="character-image" src="img/7/IMG_0145_2.png" alt="Character">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

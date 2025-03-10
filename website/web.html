@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="animation.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karas Chan</title>
+    <style>
+        body {
+            background: url('img/1/HG.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 30px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .navbar a {
+            background: rgba(255, 255, 255, 0.8);
+            color: #ff8fc4;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid #ff4d8b;
+            box-shadow: 0px 4px 10px rgba(255, 77, 139, 0.5);
+        }
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 0 4%;
+        }
+        .text-section {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title-img {
+            width: 38vw;
+            max-width: 1000px;
+            height: auto;
+        }
+        .login-button {
+            background: rgba(255, 255, 255, 0.8);
+            color: #ff8fc4;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+            border: 2px solid #ff4d8b;
+            box-shadow: 0px 4px 10px rgba(255, 77, 139, 0.5);
+        }
+        .login-button:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+        .heart-image {
+            width: 38vw;
+            max-width: 1000px;
+            height: auto;
+        }
+        .product-page {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 80px 10%;
+        }
+        .product-box {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(255, 77, 139, 0.5);
+        }
+        
+        @media (max-width: 1440px) {
+            .title-img, .heart-image {
+                width: 42vw;
+            }
+        }
+        @media (max-width: 1024px) {
+            .title-img, .heart-image {
+                width: 50vw;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .title-img, .heart-image {
+                width: 65vw;
+                max-width: 550px;
+            }
+        }
+        @media (max-width: 480px) {
+            .title-img, .heart-image {
+                width: 85vw;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="web.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="products.html">Products</a>
+        <a href="Shopping Cart.html">Cart</a>
+    </div>
+    <div class="container">
+        <div class="text-section">
+            <img src="img/1/Employee Handbook9.png" alt="Title Image" class="title-img">
+            <a href="logIn.html" class="login-button">Login</a>
+        </div>
+        <img src="img/1/23.png" alt="Cute character" class="heart-image">
+    </div>
+    
+    <div class="bottom-container">
+        <div class="bottom-images">
+            <img src="img/1/Employee Handbook.png" alt="Bottom Image" class="bottom-image">
+            <img src="img/1/Employee Handbook.png" alt="Bottom Image" class="bottom-image">
+        </div>
+    </div>
+</body>
+</html>

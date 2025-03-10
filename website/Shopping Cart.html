@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            background: url('img/1/HG.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .navbar a {
+            background: rgba(255, 255, 255, 0.8);
+            color: #ff8fc4;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid #ff4d8b;
+            box-shadow: 0px 4px 10px rgba(255, 77, 139, 0.5);
+        }
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding:120px;
+        }
+        .cart-items {
+            width: 60%;
+            max-height: 500px;
+            overflow-y: auto;
+            background: rgba(228, 193, 244, 0.6);
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 35px;
+            background: rgba(159, 188, 247, 0.6);
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+        .foto-item {
+            width: 35%;
+            justify-content: space-between;
+            padding: 20px;
+
+            background: rgb(255, 255, 255);
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        
+        .cart-icon {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            
+        }
+        .cart-summary {
+            width: 35%;
+            background: rgba(159, 188, 247, 0.6);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .btn {
+            display: block;
+            width: 80%;
+            padding: 10px;
+            margin: 15px auto;
+            background: #ff8fc4;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="web.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="products.html">Products</a>
+        <a href="Shopping Cart.html">Cart</a>
+    </nav>
+
+    <img src="img/4/Employee Handbook.png" alt="Cart Icon" class="cart-icon">
+
+    <div class="container">
+        <div class="cart-items">
+            <div class="cart-item"> Product A - $10</div>
+            <div class="cart-item">Product B - $15</div>
+            <div class="cart-item">Product C - $20</div>
+            <div class="cart-item">Product D - $12</div>
+            <div class="cart-item">Product A - $10</div>
+            <div class="cart-item">Product B - $15</div>
+            <div class="cart-item">Product C - $20</div>
+            <div class="cart-item">Product D - $12</div>
+            <div class="cart-item">Product A - $10</div>
+            <div class="cart-item">Product B - $15</div>
+            <div class="cart-item">Product C - $20</div>
+            <div class="cart-item">Product D - $12</div>
+        </div>
+        
+    
+
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <p>Total: $57</p>
+            <button class="btn">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.bottom-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+}
+
+.bottom-images {
+    display: flex;
+    animation: moveInfinite 20s linear infinite;
+    height: 50%;
+}
+
+.bottom-image {
+    width: 250%;
+    height: auto;
+}
+
+@keyframes moveInfinite {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

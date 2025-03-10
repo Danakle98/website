@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Karas Chan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('img/1/HG.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow-y: auto; /* السماح بالتمرير */
+        }
+        
+        /* أزرار التنقل بدون شريط */
+        .nav-buttons {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .nav-buttons .nav-link {
+            background: rgba(255, 255, 255, 0.8);
+            color: #ff8fc4;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid #ff4d8b;
+            box-shadow: 0px 4px 10px rgba(255, 77, 139, 0.5);
+        }
+
+        .nav-buttons .nav-link:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .container {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* زيادة حجم المربعات */
+            grid-auto-rows: 220px; /* زيادة ارتفاع المربعات */
+            gap: 30px; /* تكبير المسافة بين المربعات */
+            width: 100%;
+            max-width: 1400px; /* منع تمدد الشبكة أكثر من اللازم */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .product-box {
+            border-radius: 40px; /* زيادة التدوير */
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0.9;
+            box-shadow: 0px 6px 18px rgba(50, 50, 50, 0.8);
+        }
+
+        /* نمط كارو (شطرنجي) */
+        .product-box:nth-child(odd) {
+            background: rgba(228, 193, 244, 0.9); /* بنفسجي فاتح */
+        }
+
+        .product-box:nth-child(even) {
+            background: rgba(159, 188, 247, 0.9); /* أزرق فاتح */
+        }
+
+        /* تأثير عند مرور الماوس */
+        .product-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 22px rgba(50, 50, 50, 1);
+            opacity: 1;
+        }
+
+        /* تحسين تناسب الشبكة مع الشاشات المختلفة */
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-rows: 200px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                grid-auto-rows: 180px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                grid-auto-rows: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- أزرار التنقل بدون شريط -->
+    <div class="nav-buttons">
+        <a class="nav-link" href="web.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="#">Services</a>
+        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="products.html">Products</a>
+        <a class="nav-link" href="Shopping Cart.html">Cart</a>
+    </div>
+
+    <div class="container">
+        <div id="productsContainer" class="products-grid"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const totalProducts = 200; // زيادة عدد المنتجات
+            const container = document.getElementById("productsContainer");
+
+            for (let i = 1; i <= totalProducts; i++) {
+                const productDiv = document.createElement("div");
+                productDiv.className = "product-box";
+                productDiv.textContent = `Product ${i}`;
+
+                // إضافة حدث النقر لفتح صفحة تفاصيل المنتج
+                productDiv.addEventListener("click", function () {
+                    // نقل المستخدم إلى صفحة تفاصيل المنتج مع تمرير معرف المنتج
+                    window.location.href = `product_details.html?productId=${i}`;
+                });
+
+                container.appendChild(productDiv);
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
